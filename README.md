@@ -7,3 +7,5 @@
   <br>
   Realizado por <strong>Marcos José Ferreira</strong> e <strong>Juliana Reis</strong>
 </p>
+
+![image](https://github.com/user-attachments/assets/593dddf0-2e8e-4d7a-bfeb-4cfaba520603)
