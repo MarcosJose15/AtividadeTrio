@@ -1,13 +1,10 @@
 -- MySQL Workbench Forward Engineering
--- DROP DATABASE mydb;
+-- DROP DATABASE escolaMusica;
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
--- -----------------------------------------------------
--- Schema escolaMusica
--- -----------------------------------------------------
 
 -- -----------------------------------------------------
 -- Schema escolaMusica
@@ -16,7 +13,7 @@ CREATE SCHEMA IF NOT EXISTS `escolaMusica` DEFAULT CHARACTER SET utf8 ;
 USE `escolaMusica` ;
 
 -- -----------------------------------------------------
--- Table `escolaMusica`.`Orquestra`
+-- Table Orquestra
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `escolaMusica`.`Orquestra` (
   `idOrquestra` INT NOT NULL AUTO_INCREMENT,
@@ -27,7 +24,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Musico`
+-- Table Musico
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `escolaMusica`.`Musico` (
   `idMusico` INT NOT NULL AUTO_INCREMENT,
@@ -46,10 +43,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Instrumento`
+-- Table `escolaMusica`.`Instrumento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `escolaMusica`.`Instrumento` (
   `idInstrumento` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
   `tipo` VARCHAR(45) NOT NULL,
   `Musico_idMusico` INT NOT NULL,
   PRIMARY KEY (`idInstrumento`),
@@ -63,7 +61,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Sinfonia`
+-- Table `escolaMusica`.`Sinfonia`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `escolaMusica`.`Sinfonia` (
   `idSinfonia` INT NOT NULL AUTO_INCREMENT,

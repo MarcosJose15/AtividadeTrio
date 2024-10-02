@@ -1,4 +1,4 @@
--- -----------------------------------------------------
+-- 02/10/2024 -----------------------------------------------------
 -- Schema escolaMusica
 -- -----------------------------------------------------
 USE `escolaMusica` ;
@@ -131,3 +131,10 @@ WHERE TIMESTAMPDIFF(YEAR, m.dataNascimento, CURDATE()) > 30;
 
 -- 20. Nomes dos musicistas e suas datas de nascimento, ordenados por data de nascimento
 SELECT nome, dataNascimento FROM `escolaMusica`.`Musicista` ORDER BY dataNascimento;
+
+USE escolamusica;
+SELECT * FROM orquestra;
+SELECT * FROM instrumento;
+SELECT * FROM musicista;
+SELECT * FROM sinfonia;
+SELECT * FROM origem;

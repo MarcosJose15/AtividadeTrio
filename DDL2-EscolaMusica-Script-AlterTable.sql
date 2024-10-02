@@ -1,3 +1,8 @@
+-- 02/10/2024 -----------------------------------------------------
+-- Schema escolaMusica
+-- -----------------------------------------------------
+USE `escolaMusica` ;
+
 -- Adicionar coluna descricao à tabela Orquestra
 ALTER TABLE `escolaMusica`.`Orquestra`
 ADD COLUMN `descricao` VARCHAR(255) NULL AFTER `nome`;
@@ -10,9 +15,9 @@ MODIFY COLUMN `nome` VARCHAR(100) NOT NULL;
 ALTER TABLE `escolaMusica`.`Musico`
 CHANGE COLUMN `funcao` `posicao` VARCHAR(45) NOT NULL;
 
--- Adicionar índice único na coluna nome da tabela Orquestra
+-- Adicionar índice único na coluna idOrquestra da tabela Orquestra
 ALTER TABLE `escolaMusica`.`Orquestra`
-ADD UNIQUE INDEX `unique_nome` (`nome`);
+ADD UNIQUE INDEX `unique_idOrquestra` (`idOrquestra`);
 
 -- Remover a coluna dataCriacao da tabela Orquestra
 ALTER TABLE `escolaMusica`.`Orquestra`
@@ -39,5 +44,12 @@ ON UPDATE NO ACTION;
 RENAME TABLE `escolaMusica`.`Musico` TO `escolaMusica`.`Musicista`;
 
 -- Adicionar coluna telefone à tabela Musicista
-ALTER TABLE `escolaMusica`.`Musician`
+ALTER TABLE `escolaMusica`.`Musicista`
 ADD COLUMN `telefone` VARCHAR(20) NULL AFTER `email`;
+
+-- Permitir valores NULL para Musico_idMusico
+ALTER TABLE `escolaMusica`.`Instrumento`
+MODIFY COLUMN `Musico_idMusico` INT NULL;
+
+-- ALTER TABLE `sinfonia` DROP FOREIGN KEY `fk_Sinfonia_Instrumento1`;
+

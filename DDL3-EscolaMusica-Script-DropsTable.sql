@@ -1,4 +1,4 @@
--- -----------------------------------------------------
+-- 02/10/2024 -----------------------------------------------------
 -- Schema escolaMusica
 -- -----------------------------------------------------
 USE `escolaMusica` ;
@@ -10,6 +10,11 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `escolaMusica`.`Musicista`;
 DROP TABLE IF EXISTS `escolaMusica`.`Orquestra`;
 DROP TABLE IF EXISTS `escolaMusica`.`Instrumento`;
+DELETE FROM `instrumento` WHERE Musico_idMusico = NULL;
+DELETE FROM `instrumento`;
+DELETE FROM `orquestra` WHERE idOrquestra > 10;
+
+
 
 -- Dropar views
 DROP VIEW IF EXISTS `escolaMusica`.`view_nome_da_view`;
