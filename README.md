@@ -5,13 +5,3 @@
   <br>
   Realizado por <strong>Marcos José Ferreira</strong> e <strong>Juliana Reis</strong>
 </p>
-
-<style>
-  p {
-    font-size: 1.2em;
-    color: #333;
-  }
-  strong {
-    color: #2c3e50;
-  }
-</style>
